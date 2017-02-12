@@ -16,32 +16,32 @@ public class ChooseLife : MonoBehaviour {
 		
 	}
 
-	void OnCollisionEnter(Collision other) {
-		Debug.Log ("ENTEREED");
-		if (other.gameObject.name == "richest") {
-			//Debug.Log ("richest");
-		}
-
-		if (other.gameObject.name == "rich") {
-		}
-
-		if (other.gameObject.name == "ok") {
-		}
-
-		if (other.gameObject.name == "poor") {
-		}
-
-		if (other.gameObject.name == "poorest") {
-		}
-	
-	}
+//	void OnCollisionEnter(Collision other) {
+//		Debug.Log ("ENTEREED");
+//		if (other.gameObject.name == "richest") {
+//			//Debug.Log ("richest");
+//		}
+//
+//		if (other.gameObject.name == "rich") {
+//		}
+//
+//		if (other.gameObject.name == "ok") {
+//		}
+//
+//		if (other.gameObject.name == "poor") {
+//		}
+//
+//		if (other.gameObject.name == "poorest") {
+//		}
+//	
+//	}
 
 	void OnTriggerEnter(Collider other){
 		//Debug.Log ("enter!");
 		if (other.gameObject.name == "player") {
 			//Debug.Log ("player enter");
 			ObjectManager.s.destiny = gameObject.name.ToString ();
-			Debug.Log (ObjectManager.s.destiny);
+			//Debug.Log (ObjectManager.s.destiny);
 		}
 
 	}

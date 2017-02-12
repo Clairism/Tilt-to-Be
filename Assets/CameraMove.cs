@@ -11,6 +11,7 @@ public class CameraMove : MonoBehaviour {
 	
 	// Update is called once per frame
 	void LateUpdate () {
-		transform.Translate (Vector3.forward * speed * Time.deltaTime, Space.World);
+		if(ObjectManager.s.gamebegin)
+			transform.Translate (Vector3.forward * speed * Time.deltaTime, Space.World);
 	}
 }
