@@ -16,7 +16,8 @@ public class ObjectManager : MonoBehaviour {
 	public float poorest = 10f;
 	//Did game begin?
 	public bool gamebegin = false;
-	public Text gamebegintext;
+	public GameObject gamebeginMenu;
+	public Text gamebeginText;
 	public float gamebeginTimer = 2f;
 	public float gamebeginCounter =0f;
 	//Entrance (doors and doorwalls)
@@ -50,14 +51,16 @@ public class ObjectManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//Player score
+		//Debug.Log(score);
 		scoretext.text = score.ToString();
 
 		if(gamebegin){
 			//display "game begins now" text
-			gamebegintext.gameObject.SetActive (true);
+			gamebeginMenu.SetActive (true);
+			gamebeginText.gameObject.SetActive (true);
 			gamebeginCounter += Time.deltaTime;
 			if (gamebeginCounter > gamebeginTimer) {
-				gamebegintext.gameObject.SetActive (false);
+				gamebeginText.gameObject.SetActive (false);
 			}
 				
 			//entrance doors dissapear

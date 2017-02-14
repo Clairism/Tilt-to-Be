@@ -19,20 +19,21 @@ public class PlayerScore : MonoBehaviour {
 			//Debug.Log ("Player has a destiny!");
 			ObjectManager.s.gamebegin = true;
 			if (ObjectManager.s.destiny == "richest") {
-				ObjectManager.s.score = ObjectManager.s.richest;
+				ObjectManager.s.score += ObjectManager.s.richest;
 			}
 			if (ObjectManager.s.destiny == "rich") {
-				ObjectManager.s.score = ObjectManager.s.rich;
+				ObjectManager.s.score += ObjectManager.s.rich;
 			}
 			if (ObjectManager.s.destiny == "average") {
-				ObjectManager.s.score = ObjectManager.s.average;
+				ObjectManager.s.score += ObjectManager.s.average;
 			}
 			if (ObjectManager.s.destiny == "poor") {
-				ObjectManager.s.score = ObjectManager.s.poor;
+				ObjectManager.s.score += ObjectManager.s.poor;
 			}
 			if (ObjectManager.s.destiny == "poorest") {
-				ObjectManager.s.score = ObjectManager.s.poorest;
+				ObjectManager.s.score += ObjectManager.s.poorest;
 			}
+			Destroy (this);
 		}
 	}
 		

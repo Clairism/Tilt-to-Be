@@ -15,9 +15,10 @@ public class GetGold : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision other){
-		Debug.Log ("Collision Happens!");
-		if (other.gameObject.name == "OneGold") {
-			Debug.Log ("Getting One GOld!");
+		if (other.gameObject.tag == "OneGold") {
+			other.gameObject.SetActive (false);
+			ObjectManager.s.score ++;
+//			ObjectManager.s.scoretext.text = ObjectManager.s.score.ToString ();
 		}
 	}
 }
