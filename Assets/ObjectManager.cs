@@ -34,7 +34,8 @@ public class ObjectManager : MonoBehaviour {
 	public float undergroundH = -4.4f;
 	public float height = 5f;
 	//obstacle index
-	public int index1, index2;
+	public int index1, index2, index3;
+	public float ObstacleSize = 0.6f;
 
 	private static ObjectManager singleton;
 	public static ObjectManager s { get { return singleton; } }

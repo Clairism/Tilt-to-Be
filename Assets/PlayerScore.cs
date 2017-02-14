@@ -14,6 +14,7 @@ public class PlayerScore : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+
 		if (ObjectManager.s.destiny != "") {
 			//Debug.Log ("Player has a destiny!");
 			ObjectManager.s.gamebegin = true;
@@ -34,4 +35,6 @@ public class PlayerScore : MonoBehaviour {
 			}
 		}
 	}
+		
+
 }

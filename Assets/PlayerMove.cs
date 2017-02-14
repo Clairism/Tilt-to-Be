@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	public float speed = 5f;
+	public Vector3 originalA;
+	public Text accX, accY, accZ;
 	// Use this for initialization
 	void Start () {
-		
+		originalA = new Vector3 (Input.acceleration.x, Input.acceleration.y, Input.acceleration.z);
 	}
 	
 	// Update is called once per frame
@@ -23,5 +26,16 @@ public class PlayerMove : MonoBehaviour {
 		if (Input.GetKey (KeyCode.D)) {
 			transform.Translate (Vector3.right * speed * Time.deltaTime, Space.World);
 		}
+		float debugY = 1f;
+		accX.text = Input.acceleration.x.ToString ();
+		accY.text = Input.acceleration.y.ToString ();
+		accZ.text = Input.acceleration.y.ToString ();
+		if (Input.acceleration.y > 0) {
+			debugY = 2f;
+		}
+		transform.Translate(Input.acceleration.x * 2, 0 , Input.acceleration.y * debugY);
+
+
+
 	}
 }
