@@ -8,7 +8,11 @@ public class PlayerMove : MonoBehaviour {
 	public float speed_mobile = 2f;
 	public Vector3 originalA;
 	public Text accX, accY, accZ;
+	public Text gameOverText;
 	// Use this for initialization
+
+	bool gameOver = false;
+
 	void Start () {
 		originalA = new Vector3 (Input.acceleration.x, Input.acceleration.y, Input.acceleration.z);
 	}
@@ -37,6 +41,17 @@ public class PlayerMove : MonoBehaviour {
 		transform.Translate(Input.acceleration.x * 2 * speed_mobile, 0 , Input.acceleration.y * debugY * speed_mobile);
 
 
-
+		if (gameOver) {
+			gameOverText.gameObject.SetActive (true);
+			Destroy (this);
+		}
+	}
+		
+	void OnCollisionEnter (Collision other){
+		
+		if (other.gameObject.CompareTag ("Wall")) {
+			Debug.Log ("Game over now");
+			gameOver = true;
+		}
 	}
 }
