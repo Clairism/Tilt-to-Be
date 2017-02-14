@@ -20,6 +20,9 @@ public class ObjectManager : MonoBehaviour {
 	public Text gamebeginText;
 	public float gamebeginTimer = 2f;
 	public float gamebeginCounter =0f;
+	//Is game over?
+	public bool isGameOver = false;
+
 	//Entrance (doors and doorwalls)
 	public GameObject Entrance;
 	public float EntranceGoneSpeed = 2f;

@@ -54,6 +54,7 @@ public class PlayerMove : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Wall")) {
 			Debug.Log ("Game over now");
 			gameOver = true;
+			ObjectManager.s.isGameOver = true;
 		}
 	}
 }
