@@ -49,8 +49,11 @@
      <Compile Include="Assets\Animate_Rise.cs" />
      <Compile Include="Assets\CameraMove.cs" />
      <Compile Include="Assets\ChooseLife.cs" />
+     <Compile Include="Assets\DestroySelf.cs" />
      <Compile Include="Assets\GenerateObjects.cs" />
      <Compile Include="Assets\GenerateObstacles.cs" />
+     <Compile Include="Assets\GenerateObstacles_first.cs" />
+     <Compile Include="Assets\GetGold.cs" />
      <Compile Include="Assets\ObjectManager.cs" />
      <Compile Include="Assets\PlayerMove.cs" />
      <Compile Include="Assets\PlayerScore.cs" />

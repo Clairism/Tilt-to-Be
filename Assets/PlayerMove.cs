@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class PlayerMove : MonoBehaviour {
 	public float speed = 5f;
+	public float speed_mobile = 2f;
 	public Vector3 originalA;
 	public Text accX, accY, accZ;
 	// Use this for initialization
@@ -33,7 +34,7 @@ public class PlayerMove : MonoBehaviour {
 		if (Input.acceleration.y > 0) {
 			debugY = 2f;
 		}
-		transform.Translate(Input.acceleration.x * 2, 0 , Input.acceleration.y * debugY);
+		transform.Translate(Input.acceleration.x * 2 * speed_mobile, 0 , Input.acceleration.y * debugY * speed_mobile);
 
 
 
