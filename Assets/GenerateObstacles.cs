@@ -51,8 +51,8 @@ public class GenerateObstacles : MonoBehaviour {
 			//RandomPosition (Random.Range(2,4));
 			Instantiate (ObjectManager.s.wall[ObjectManager.s.index2], RandomPos(Random.Range(1.01f, 1.99f)), Quaternion.Euler(90f, 0f, RandomRotation(Random.Range(0f,2f))));
 			Instantiate (ObjectManager.s.wall[ObjectManager.s.index3], RandomPos(Random.Range(2.01f, 4f)), Quaternion.Euler(90f, 0f, RandomRotation(Random.Range(0f,2f))));
-			Debug.Log (RandomRotation(0.5f));
-			Debug.Log (RandomRotation(1.5f));
+			//Debug.Log (RandomRotation(0.5f));
+			//Debug.Log (RandomRotation(1.5f));
 
 
 			ObjectManager.s.wall [ObjectManager.s.index1].gameObject.transform.localScale = new Vector3 (ObjectManager.s.ObstacleSize, ObjectManager.s.ObstacleSize, ObjectManager.s.ObstacleSize);
