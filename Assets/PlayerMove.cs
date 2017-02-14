@@ -7,8 +7,9 @@ public class PlayerMove : MonoBehaviour {
 	public float speed = 5f;
 	public float speed_mobile = 2f;
 	public Vector3 originalA;
-	public Text accX, accY, accZ;
+//	public Text accX, accY, accZ;
 	public Text gameOverText;
+	public GameObject restartButton;
 	// Use this for initialization
 
 	bool gameOver = false;
@@ -32,9 +33,9 @@ public class PlayerMove : MonoBehaviour {
 			transform.Translate (Vector3.right * speed * Time.deltaTime, Space.World);
 		}
 		float debugY = 1f;
-		accX.text = Input.acceleration.x.ToString ();
-		accY.text = Input.acceleration.y.ToString ();
-		accZ.text = Input.acceleration.y.ToString ();
+//		accX.text = Input.acceleration.x.ToString ();
+//		accY.text = Input.acceleration.y.ToString ();
+//		accZ.text = Input.acceleration.y.ToString ();
 		if (Input.acceleration.y > 0) {
 			debugY = 2f;
 		}
@@ -43,7 +44,8 @@ public class PlayerMove : MonoBehaviour {
 
 		if (gameOver) {
 			gameOverText.gameObject.SetActive (true);
-			Destroy (this);
+			restartButton.SetActive (true);
+			//Destroy (this);
 		}
 	}
 		
